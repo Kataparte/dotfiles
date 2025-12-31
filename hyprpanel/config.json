@@ -42,5 +42,8 @@
   "theme.bar.buttons.bluetooth.icon": "#89dceb",
   "menus.dashboard.stats.enable_gpu": false,
   "menus.power.lowBatteryNotification": false,
-  "menus.volume.raiseMaximumVolume": true
+  "menus.volume.raiseMaximumVolume": true,
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Hyprland News",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "firefox https://hypr.land/news/"
 }
