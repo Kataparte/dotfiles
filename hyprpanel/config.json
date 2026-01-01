@@ -45,5 +45,11 @@
   "menus.volume.raiseMaximumVolume": true,
   "menus.dashboard.shortcuts.left.shortcut2.icon": "",
   "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Hyprland News",
-  "menus.dashboard.shortcuts.left.shortcut2.command": "firefox https://hypr.land/news/"
+  "menus.dashboard.shortcuts.left.shortcut2.command": "firefox https://hypr.land/news/",
+  "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
+  "menus.dashboard.directories.left.directory2.label": "󰉏  Videos",
+  "menus.dashboard.directories.left.directory3.label": "󰚝  Projects",
+  "menus.dashboard.directories.right.directory1.label": "󱧶  Documents",
+  "menus.dashboard.directories.right.directory2.label": "󰉏  Pictures",
+  "menus.dashboard.directories.right.directory3.label": "󱂵  Home"
 }
