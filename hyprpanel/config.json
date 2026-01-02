@@ -16,5 +16,15 @@
     "/"
   ],
   "theme.bar.floating": true,
-  "theme.custom_css": "/home/kataparte/.config/hyprpanel/scss/user.scss"
+  "theme.custom_css": "/home/kataparte/.config/hyprpanel/scss/user.scss",
+  "theme.bar.buttons.dashboard.icon": "#c061cb",
+  "theme.bar.buttons.dashboard.border": "#dc8add",
+  "theme.bar.buttons.workspaces.pill.active_width": "4em",
+  "theme.bar.buttons.workspaces.hover": "#f5c2e7",
+  "theme.bar.buttons.workspaces.occupied": "#813d9c",
+  "theme.bar.menus.menu.battery.label.color": "#62a0ea",
+  "menus.clock.time.hideSeconds": true,
+  "bar.clock.format": "%a %b %d  %I:%M %p",
+  "menus.clock.weather.key": "a04d1ecbb2404f86a2d203526252712",
+  "menus.clock.weather.location": "27401"
 }
