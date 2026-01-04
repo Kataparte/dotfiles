@@ -92,5 +92,17 @@
         "notifications"
       ]
     }
-  }
+  },
+  "bar.battery.label": true,
+  "theme.bar.buttons.battery.enableBorder": false,
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.showLabel": true,
+  "bar.battery.hideLabelWhenFull": false,
+  "bar.volume.label": true,
+  "theme.bar.buttons.volume.enableBorder": false,
+  "theme.bar.menus.menu.dashboard.background.color": "#11111b",
+  "theme.bar.menus.menu.dashboard.card.color": "#1e1e2e",
+  "theme.bar.buttons.notifications.background": "#242438",
+  "theme.bar.transparent": false,
+  "theme.bar.background": "#11111b"
 }
