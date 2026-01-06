@@ -5,10 +5,17 @@
     "margin-top": 8,
     "margin-left": 10,
     "margin-right": 10,    
+    "margin-bottom": 12,  
 
     "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "memory", "disk"],
     "modules-center": ["custom/weather", "clock"],
-    "modules-right": ["pulseaudio", "network", "battery", "custom/notification"],
+    "modules-right": [
+    "tray",
+    "pulseaudio",
+    "battery",
+    "custom/notification",
+    "custom/power"
+    ],  
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -39,8 +46,15 @@
     "custom/notification": {
         "tooltip": false,
         "format": "󰂚",
-        "on-click": "swaync-client -t -sw"
-    },    
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout -C ~/.config/wlogout/style.css -l ~/.config/wlogout/layout -b 2"
+    },
 
     "custom/weather": {
         "format": "{}",
@@ -57,18 +71,12 @@
     },       
 
     "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        /* Tight format for the bubble look */
+        "states": { "warning": 30, "critical": 15 },
         "format": "{icon} {capacity}%",
-        "format-charging": "󱐋 {capacity}%",
-        "format-plugged": " {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-click": "hyprpanel toggleWindow energymenu",
-        "tooltip": false
-    },
+        "on-click": "~/.config/waybar/power_menu.sh",
+        "tooltip": true
+    },    
 
     "cpu": {
         "format": "  {usage}%",
