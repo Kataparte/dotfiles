@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if pgrep -x "waybar" > /dev/null; then
+    # Waybar is running, so we switch to HyprPanel
+    killall waybar swaync
+    hyprpanel & 
+else
+    # Waybar is NOT running, so we kill HyprPanel/AGS and bring Waybar back
+    killall hyprpanel
+    pkill -f "ags"
+    pkill -f "gjs"
+    waybar &
+    swaync &
+fi
