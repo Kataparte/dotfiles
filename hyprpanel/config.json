@@ -80,5 +80,7 @@
   "menus.energy.anchor": "top right",
   "menus.notifications.anchor": "top right",
   "scalingPriority": "hyprland",
-  "theme.bar.layer": "top"
+  "theme.bar.layer": "top",
+  "bar.network.showWifiInfo": false,
+  "theme.bar.buttons.media.enableBorder": false
 }
