@@ -1,0 +1,9 @@
+@define-color primary {{colors.primary.default.hex}};
+@define-color surface {{colors.surface.default.hex}};
+@define-color on_primary_container {{colors.on_primary_container.default.hex}};
+
+/* Using the suggested 'to_color' filter to allow transparency */
+@define-color bar_bg {{colors.surface.default.hex | to_color | set_alpha: 0.6}};
+@define-color bar_border {{colors.primary.default.hex | to_color | set_alpha: 0.3}};
+@define-color pill_bg {{colors.primary.default.hex | to_color | set_alpha: 0.15}};
+@define-color pill_border {{colors.primary.default.hex | to_color | set_alpha: 0.2}};
