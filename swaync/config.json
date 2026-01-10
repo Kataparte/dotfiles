@@ -20,10 +20,22 @@
     "backlight": {},
     "buttons-grid": {
       "actions": [
-        { "label": "󰤨", "command": "nm-connection-editor" },
-        { "label": "󰂯", "command": "blueman-manager" },
-        { "label": "󰕾", "command": "pavucontrol" },
-        { "label": "󰄀", "command": "grimblast copy area" }
+        { 
+          "label": "󰤨", 
+          "command": "nm-connection-editor" 
+        },
+        { 
+          "label": "󰂯", 
+          "command": "bluetoothctl power on" 
+        },
+        { 
+          "label": "󰂯 Buds", 
+          "command": "bluetoothctl connect 28:3D:C2:4A:87:4F" 
+        },
+        { 
+          "label": "󰄀", 
+          "command": "grimblast copy area" 
+        }
       ]
     }
   }

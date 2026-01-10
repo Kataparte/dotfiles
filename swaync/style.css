@@ -22,15 +22,16 @@
     border-radius: 12px;
     color: @on_surface;      
     margin: 5px;
-    min-width: 60px;
-    min-height: 45px;
+    min-width: 80px; /* Increased slightly for the "Buds" text */
+    min-height: 50px;
     transition: all 0.3s ease;
     border: 1px solid @bar_border;
 }
 
-/* Icon (Label) sizing */
+/* Icon (Label) sizing - Adjusted to handle both icons and text */
 .widget-buttons-grid > flowbox > flowboxchild > button > label {
-    font-size: 26px;
+    font-size: 18px; /* Slightly smaller to fit "󰂯 Buds" comfortably */
+    font-weight: bold;
 }
 
 /* Hover effect */
