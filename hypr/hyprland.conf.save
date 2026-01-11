@@ -1,0 +1,125 @@
+# ~/.config/hypr/hyprland.conf
+
+# 1. MONITOR CONFIG
+# Check `hyprctl monitors` to get your name (e.g., eDP-1)
+# monitor = name, resolution, position, scale
+monitor=eDP-1, 1920x1080@60, 0x0, 1
+
+# 2. EXECUTE CORE TOOLS
+exec-once = swww init
+exec-once = hyprpanel
+exec-once = nm-applet --indicator # System tray icons
+exec-once = killall -9 swaync
+exec-once = swww-daemon
+exec-once = swww img ~/Pictures/bebop.jpg
+# Autostart apps on their assigned workspaces
+exec-once = [workspace 1 silent] firefox
+exec-once = [workspace 2 silent] code-oss
+exec-once = [workspace 3 silent] steam
+
+# 3. THE "GLASSMorphism" RULES
+# This is the secret sauce for monasm-dots. 
+# It tells Hyprland to blur the layers created by AGS.
+# 3. THE "GLASSMorphism" RULES
+# We removed waybar/wofi because you are using AGS and Rofi-Wayland.
+# 3. THE "GLASSMorphism" RULES
+layerrule = blur, rofi
+layerrule = ignorezero, rofi
+layerrule = xray 1, rofi  # This forces blur to 'see through' to the wallpaper
+
+# 4. LOOK & FEEL
+general {
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 2
+    col.active_border = rgba(D980B9ee) rgba(000000ee) 45deg
+    col.inactive_border = rgba(595959aa)   
+    layout = dwindle
+}
+
+decoration {
+    rounding = 12
+
+    blur {
+        enabled = true
+        size = 6
+        passes = 3
+        new_optimizations = true
+    }
+
+    # NEW SYNTAX START
+    shadow {
+        enabled = true
+        range = 4
+        render_power = 3
+        color = rgba(1a1a1aee)
+    }
+    # NEW SYNTAX END
+}
+
+input {
+    kb_layout = us
+    follow_mouse = 1
+
+    touchpad {
+        natural_scroll = true
+        tap-to-click = true    # This is likely what's missing
+        clickfinger_behavior = true
+    }
+
+    sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+}
+
+# Volume Control (works for both Buds2 Pro and Laptop Speakers)
+bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindl  = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+# Screen Brightness
+bindel = , XF86MonBrightnessUp, exec, brightnessctl set 5%+
+bindel = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+# 5. KEYBINDS (The Basics)
+$mainMod = SUPER
+bind = $mainMod, Q, exec, kitty
+bind = $mainMod, C, killactive, 
+bind = $mainMod, M, exit, 
+bind = $mainMod, E, exec, dolphin
+bind = $mainMod, V, togglefloating,
+bind = $mainMod, R, exec, rofi -show drun # We'll set this up next
+# Snapshot an area to your Pictures folder
+bind = $mainMod, S, exec, grimblast save area
+# Move/resize windows with mainMod + LMB/RMB and dragging
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+# Color picker (Super + P)
+bind = $mainMod, P, exec, hyprpicker -a
+
+# Switch workspaces with Super + [1-4]
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+
+# Move active window to a workspace with Super + SHIFT + [1-4]
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+
+# Force rofi to be semi-transparent so the blur can shine through
+# windowrulev2 = opacity 0.8 override 0.8 override, class:^(rofi)$
+
+# Apply blur to Rofi windows
+windowrulev2 = opacity 0.9 0.8, class:(rofi)
+layerrule = blur, rofi
+layerrule = ignorezero, rofi
+
+# Assigning Apps to Workspaces
+windowrulev2 = workspace 1, class:^(firefox)$
+windowrulev2 = workspace 2, class:^(code-oss)$
+windowrulev2 = workspace 3, class:^(steam)$
+
+# The "Floating" Dolphin Rule (Recommended for Laptop)
+windowrulev2 = float, class:^(org.kde.dolphin)$
+windowrulev2 = size 1000 600, class:^(org.kde.dolphin)$
+windowrulev2 = center, class:^(org.kde.dolphin)$
