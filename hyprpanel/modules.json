@@ -1,9 +1,0 @@
-{
-    "custom/docs": {
-        "icon": "libreoffice-main",
-        "label": "Docs",
-        "tooltip": "LibreOffice is running",
-        "execute": "pgrep -x soffice.bin > /dev/null && echo '{\"text\": \"Docs\", \"class\": \"active\"}' || echo ''",
-        "interval": 2000
-    }
-}
