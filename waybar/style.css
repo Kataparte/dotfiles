@@ -86,3 +86,9 @@ window#waybar {
     font-size: 18px;
 }
 
+menu, tooltip {
+    background: rgba(30, 30, 46, 0.9); /* A dark purple to match your theme */
+    border: 2px solid #cba6f7;        /* An amethyst border */
+    border-radius: 12px;
+    padding: 8px;
+}
