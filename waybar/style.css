@@ -16,7 +16,7 @@ window#waybar {
 }
 
 /* Base Pill/Bubble Style */
-#custom-launcher, #workspaces, #cpu, #memory, #disk, #clock, #custom-weather, #pulseaudio, #network, #battery, #tray, #custom-notification, #custom-power {
+#custom-launcher, #workspaces, #cpu, #memory, #disk, #clock, #custom-weather, #pulseaudio, #network, #battery, #tray, #custom-notification, #custom-power, #custom-sunset {
     background: @pill_bg;
     color: @on_surface;
     border-radius: 20px;
@@ -28,7 +28,7 @@ window#waybar {
 }
 
 /* Hover Effects */
-#pulseaudio:hover, #network:hover, #clock:hover, #battery:hover, #tray:hover, #custom-notification:hover, #custom-power:hover {
+#pulseaudio:hover, #network:hover, #clock:hover, #battery:hover, #tray:hover, #custom-notification:hover, #custom-power:hover, #custom-sunset:hover {
     background: @primary;
     color: @surface;
 }
@@ -79,3 +79,10 @@ window#waybar {
     margin-left: 10px;
     background: rgba(255, 255, 255, 0.1); /* Temporary: help us see the 'box' */
 }
+
+#custom-sunset {
+    color: @primary;
+    padding: 0 10px;
+    font-size: 18px;
+}
+

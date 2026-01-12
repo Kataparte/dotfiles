@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30, // Lowered from 34
+    "height": 35,
     "margin-top": 8,
     "margin-left": 10,
     "margin-right": 10,    
@@ -15,6 +15,7 @@
     "modules-center": ["custom/weather", "clock"],
     "modules-right": [
     "tray",
+    "custom/sunset",
     "pulseaudio",
     "battery",
     "custom/notification",
@@ -154,6 +155,13 @@
     "custom/cava": {
         "exec": "~/.local/bin/waybar-cava",
         "format": "{}",
+        "tooltip": false
+    },
+
+    "custom/sunset": {
+        "interval": 2,
+        "exec": "pgrep -x hyprsunset > /dev/null && echo '󰖔' || echo '󰖙'",
+        "on-click": "pgrep -x hyprsunset > /dev/null && killall hyprsunset || hyprsunset -t 5000",
         "tooltip": false
     }
 
