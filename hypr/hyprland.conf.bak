@@ -72,7 +72,6 @@ bind = $mainMod, S, exec, grimblast --notify save area
 bind = $mainMod, P, exec, hyprpicker -a
 bind = $mainMod, L, exec, hyprlock
 bind = $mainMod SHIFT, W, exec, wall-picker
-bind = $mainMod SHIFT, E, exec, wleave
 bind = $mainMod SHIFT, R, exec, /home/kataparte/.local/bin/toggle-panel
 bind = $mainMod, N, exec, pgrep hyprsunset && killall hyprsunset || hyprsunset -t 5000
 bindm = $mainMod, mouse:272, movewindow

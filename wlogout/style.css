@@ -1,40 +1,20 @@
 @import "../../.config/waybar/colors.css";
 
 window {
-    background-color: transparent;
-}
-
-/* This is the container that actually holds the buttons */
-grid {
-    background-color: @pill_bg;
-    border: 1px solid @bar_border;
-    border-radius: 24px;
-    padding: 10px;
-    /* Force the position: Top Right */
-    margin-top: 60px;
-    margin-right: 20px;
-    margin-left: 1700px; /* Increase this to make the pill thinner */
-    margin-bottom: 550px; /* Increase this to make the pill shorter */
+    background-color: rgba(12, 12, 12, 0.9);
 }
 
 button {
-    all: unset;
-    background-color: transparent;
-    border-radius: 16px;
-    margin: 4px;
-    padding: 10px;
-    color: @on_surface;
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 16px;
-    transition: 0.2s ease-in-out;
+    color: #FFFFFF;
+    background-color: #1E1E1E;
+    border-style: solid;
+    border-width: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
 }
 
-button:hover {
-    background-color: @primary;
-    color: @surface;
-}
-
-/* Removes the default bulky icons */
-#lock, #logout, #reboot, #shutdown {
-    background-image: none;
+button:focus, button:active, button:hover {
+    background-color: #3700B3;
+    outline-style: none;
 }

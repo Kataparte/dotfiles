@@ -19,7 +19,6 @@
     "pulseaudio",
     "battery",
     "custom/notification",
-    "custom/power"
     ],  
 
     "hyprland/workspaces": {
@@ -66,19 +65,12 @@
         "escape": true
     },
 
-    "custom/power": {
-        "format": "⏻",
-        "tooltip": false,
-        "on-click": "wleave --css /home/kataparte/.config/wlogout/style.css"
-    },
-
     "custom/weather": {
         "format": "{}",
-        "tooltip": true,
-        "interval": 3600,
+        "return-type": "json",
         "exec": "~/.config/waybar/weather.sh",
-        "return-type": "json"
-    },
+        "interval": 3600
+    },    
 
     "clock": {
         "format": "  {:%I:%M %p  |  󰃭  %a %d}",

@@ -35,3 +35,7 @@ output_path = '~/.config/hypr/hyprlock.conf'
 [templates.vscode]
 input_path = '~/.config/matugen/templates/vscode.json'
 output_path = '~/.config/Code - OSS/User/settings.json'
+
+[templates.wleave]
+input_path = '~/.config/matugen/templates/wleave.css'
+output_path = '~/.config/wleave/style.css'

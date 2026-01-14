@@ -1,0 +1,40 @@
+/* The main background window */
+window {
+    background-image: url("/home/kataparte/Pictures/wallpapers/mood.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    all: unset;
+    /* Use standard Hex for maximum compatibility */
+    background-color: {{colors.surface_container.default.hex}};
+    color: {{colors.on_surface.default.hex}};
+    border-radius: 20px;
+    margin: 15px;
+    padding: 40px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px;
+    
+    min-width: 200px;
+    min-height: 200px;
+    
+    outline: none;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: {{colors.primary.default.hex}};
+    color: {{colors.on_primary.default.hex}};
+}
+
+/* Kills the second highlight selection */
+button:focus, button:active {
+    background-color: {{colors.surface_container.default.hex}};
+    color: {{colors.on_surface.default.hex}};
+    outline: none;
+    box-shadow: none;
+}
