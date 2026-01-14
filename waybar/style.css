@@ -34,18 +34,50 @@ window#waybar {
 }
 
 /* Spacing and Alignment Fixes */
-#custom-launcher { margin-left: 15px; }
-#custom-power { margin-right: 15px; }
+#custom-launcher { 
+    margin-left: 15px; 
+    margin-right: 0;           /* Remove gap on the right */
+    border-right: none;        /* Remove the border between them */
+    border-radius: 20px 0 0 20px; /* Round ONLY the left side */
+}
 
-#workspaces button {
-    padding: 0 6px; 
+#custom-power { 
+    margin-right: 15px; 
+}
+
+/* 1. Tighten the container (the pill) */
+#workspaces {
+    background: @pill_bg;
     color: @on_surface;
-    opacity: 0.4;
+    border: 1px solid @bar_border;
+    transition: all 0.3s ease;
+    
+    margin: 4px 3px;
+    margin-left: 0;            /* Remove gap on the left */
+    padding: 0 6px;
+    
+    border-radius: 0 20px 20px 0; /* Round ONLY the right side */
+}
+
+/* 2. Tighten the diamonds (the buttons) */
+#workspaces button {
+    all: unset;
+    color: alpha(@primary, 0.3); 
+    background: transparent;
+    font-size: 24px;      
+    
+    /* REDUCE THIS: Change from 6px to 2px */
+    margin: 0 3px;       
+    
+    padding: 0;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
     color: @primary;
-    opacity: 1;
+    background: transparent;
+    text-shadow: 0 0 8px alpha(@primary, 0.6);
+    font-size: 28px; 
 }
 
 /* Waybar Media Player */
@@ -91,4 +123,27 @@ menu, tooltip {
     border: 2px solid #cba6f7;        /* An amethyst border */
     border-radius: 12px;
     padding: 8px;
+}
+
+#tray menu {
+    background: @pill_bg;
+    color: @on_surface;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Target the actual icons inside the tray */
+#tray > widget > button > image {
+    margin: 0 3px; /* This creates the actual gap between the icons */
+}
+
+/* If the above doesn't work, try this more generic one */
+#tray * {
+    margin: 0 2px;
 }
