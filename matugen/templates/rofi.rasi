@@ -4,4 +4,15 @@
     bg-alt: rgba({{colors.surface.default.red}}, {{colors.surface.default.green}}, {{colors.surface.default.blue}}, 0.9);
     fg: {{colors.on_surface.default.hex}};
     border-col: {{colors.primary.default.hex}};
+
+    /* The "Missing" variable your error mentioned */
+    selected-normal-background: {{colors.primary.default.hex}};
+    
+    /* Additional standard variables to prevent future errors */
+    selected-normal-foreground: {{colors.on_primary.default.hex}};
+    normal-background: transparent;
+    normal-foreground: {{colors.on_surface.default.hex}};
+    alternate-normal-background: transparent;
+    active-background: {{colors.secondary.default.hex}};
+    urgent-background: {{colors.error.default.hex}};
 }

@@ -1,5 +1,5 @@
 @theme "/usr/share/rofi/themes/sidebar.rasi"
-@import "~/.cache/matugen/colors-rofi.rasi"
+@import "~/.config/rofi/colors.rasi"
 
 /* --- Slim & Bright Overrides --- */
 window {

@@ -4,4 +4,15 @@
     bg-alt: rgba(21, 18, 24, 0.9);
     fg: #e7e0e8;
     border-col: #d5bbfc;
+
+    /* The "Missing" variable your error mentioned */
+    selected-normal-background: #d5bbfc;
+    
+    /* Additional standard variables to prevent future errors */
+    selected-normal-foreground: #3a255b;
+    normal-background: transparent;
+    normal-foreground: #e7e0e8;
+    alternate-normal-background: transparent;
+    active-background: #cec2db;
+    urgent-background: #ffb4ab;
 }
