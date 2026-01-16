@@ -34,6 +34,7 @@
 
     "custom/launcher": {
         "format": "󰣇",
+        "tooltip": false,
         "on-click": "rofi -show drun -theme-str 'window {width: 30%;} listview {columns: 2;}'"
     },
 
