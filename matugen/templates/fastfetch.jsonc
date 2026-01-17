@@ -7,15 +7,15 @@
             "left": 2
         },
         "color": {
-            "1": "#adc6ff",
-            "2": "#bfc6dc"
+            "1": "{{colors.primary.default.hex}}",
+            "2": "{{colors.secondary.default.hex}}"
         }
     },
     "display": {
         "separator": " ➜ ",
         "color": {
-            "keys": "#adc6ff",
-            "title": "#debcdf"
+            "keys": "{{colors.primary.default.hex}}",
+            "title": "{{colors.tertiary.default.hex}}"
         }
     },
     "modules": [

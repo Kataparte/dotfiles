@@ -40,3 +40,20 @@ output_path = '~/.config/Code - OSS/User/settings.json'
 [templates.wleave]
 input_path = '~/.config/matugen/templates/wleave.css'
 output_path = '~/.config/wleave/style.css'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.matrix]
+input_path = '~/.config/matugen/templates/matrix_alias.sh'
+output_path = '~/.config/matugen/matrix_alias.sh'
+
+[templates.dashboard]
+input_path = '~/.config/matugen/templates/sys_dashboard.sh'
+output_path = '~/.config/hypr/scripts/sys_dashboard.sh'
+post_hook = 'chmod +x ~/.config/hypr/scripts/sys_dashboard.sh'
