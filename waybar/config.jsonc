@@ -15,7 +15,7 @@
     ],
     "modules-center": ["custom/weather", "clock"],
     "modules-right": [
-    "tray",
+    "network",
     "custom/sunset",
     "pulseaudio",
     "battery",
@@ -56,10 +56,12 @@
     },
 
     "network": {
-        "format": "󰤨",
-        "on-click": "swaync-client -t -sw"
+        "format-wifi": " ",
+        "format-ethernet": "󰈀 ",
+        "tooltip-format": "{essid}",
+        "on-click": "~/.config/rofi/rofi-network-menu.sh"
     },
-
+    
     "custom/notification": {
         "tooltip": false,
         "format": "󰂚",

@@ -118,36 +118,6 @@ window#waybar {
     font-size: 18px;
 }
 
-menu, tooltip {
-    background: rgba(30, 30, 46, 0.9); /* A dark purple to match your theme */
-    border: 2px solid #cba6f7;        /* An amethyst border */
-    border-radius: 12px;
-    padding: 8px;
-}
-
-#tray menu {
-    background: @pill_bg;
-    color: @on_surface;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-}
-
-/* Target the actual icons inside the tray */
-#tray > widget > button > image {
-    margin: 0 3px; /* This creates the actual gap between the icons */
-}
-
-/* If the above doesn't work, try this more generic one */
-#tray * {
-    margin: 0 2px;
-}
-
 /* Make it look like the middle of the pill */
 #custom-wallpaper {
     background: @pill_bg;
