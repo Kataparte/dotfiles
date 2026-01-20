@@ -58,7 +58,7 @@
     "network": {
         "format-wifi": " ",
         "format-ethernet": "󰈀 ",
-        "tooltip-format": "{essid}",
+        "tooltip-format": "{essid} {signalStrength}%",
         "on-click": "~/.config/rofi/rofi-network-menu.sh"
     },
     

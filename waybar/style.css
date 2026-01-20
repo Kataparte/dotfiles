@@ -150,3 +150,17 @@ window#waybar {
     background: @primary;
     color: @surface;
 }
+
+/* This forces the background to be a solid color regardless of the bar's alpha */
+tooltip {
+    background-color: #1e1e2e;      /* Replace with your @bg-alt hex if different */
+    background-image: none;         /* Removes any inherited transparent gradients */
+    border: 1px solid @bar_border;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 8px;
+    background: transparent;
+}
