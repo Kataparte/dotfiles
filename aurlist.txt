@@ -53,6 +53,7 @@ rofi-bluetooth-git r41.0cca4d4-1
 sdl2_sound-debug 2.0.4-1
 ttf-ms-fonts 2.0-12
 unimatrix-git r89.5cf67aa-1
+visual-studio-code-bin 1.108.2-1
 waypaper 2.7-1
 wf-recorder-git r233.9da69a7-1
 wlogout 1.2.2-0

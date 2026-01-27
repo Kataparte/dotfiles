@@ -176,6 +176,7 @@ typescript 5.9.3-2
 ufw 0.36.2-7
 unimatrix-git r89.5cf67aa-1
 unzip 6.0-23
+visual-studio-code-bin 1.108.2-1
 vscode-html-languageserver 1.107.0-1
 wacomtablet 6.5.5-1
 waybar 0.14.0-6
