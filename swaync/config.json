@@ -10,32 +10,34 @@
     "volume",
     "backlight",
     "buttons-grid",
-    "notifications"
+    "notifications",
+    "buttons-grid#power"
   ],
   "widget-config": {
-    "title": { "text": "Control Center", "clear-all-button": true, "button-text": "Clear" },
+    "title": {
+      "text": "Control Center",
+      "clear-all-button": true,
+      "button-text": "Clear"
+    },
     "notifications": {},
     "mpris": {},
     "volume": {},
     "backlight": {},
     "buttons-grid": {
       "actions": [
-        { 
-          "label": "󰤨", 
-          "command": "nm-connection-editor" 
-        },
-        { 
-          "label": "󰂯", 
-          "command": "bluetoothctl power on" 
-        },
-        { 
-          "label": "󰂯 Buds", 
-          "command": "bluetoothctl connect 28:3D:C2:4A:87:4F" 
-        },
-        { 
-          "label": "󰄀", 
-          "command": "grimblast copy area" 
-        }
+        { "label": "󰤨", "command": "nm-connection-editor" },
+        { "label": "󰂯", "command": "bluetoothctl power on" },
+        { "label": "󰂯 Buds", "command": "bluetoothctl connect 28:3D:C2:4A:87:4F" },
+        { "label": "󰄀", "command": "grimblast copy area" }
+      ]
+    },
+    "buttons-grid#power": {
+      "column": 3,
+      "row": 1,
+      "actions": [
+        { "label": "⏻", "command": "systemctl poweroff" },
+        { "label": "󰑓", "command": "systemctl reboot" },
+        { "label": "󰍃", "command": "hyprctl dispatch exit 0" }
       ]
     }
   }

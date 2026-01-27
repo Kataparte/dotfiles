@@ -8,7 +8,8 @@ alias grep='grep --color=auto'
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-alias setwall='function _setwall() { swww img "$1" && matugen image "$1"; }; _setwall'
+#alias setwall='function _setwall() { swww img "$1" && matugen image "$1"; }; _setwall'
+alias setwall='function _setwall() { swww img "$1" && matugen image "$(realpath "$1")"; }; _setwall'
 export PATH="$HOME/bin:$PATH"
 
 alias dotsync='cd ~/dotfiles && git add . && git commit -m "Manual sync" && git push && cd -'

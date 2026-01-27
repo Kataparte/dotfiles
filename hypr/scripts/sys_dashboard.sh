@@ -18,4 +18,4 @@ hyprctl dispatch exec [workspace 9] "kitty --class sys_fetch -o font_size=15 -o 
 # Keep Cava running in the background for the Waybar
 hyprctl dispatch exec [workspace 9] "kitty --class sys_visual --minimize -e cava"
 # 4. Launch Pipes (Using the full path to avoid 'command not found')
-hyprctl dispatch exec [workspace 9] "kitty --class sys_matrix -e /usr/bin/pipes.sh -c #84d2e6"
+hyprctl dispatch exec [workspace 9] "kitty --class sys_matrix -e /usr/bin/pipes.sh -c #ffb4ac"

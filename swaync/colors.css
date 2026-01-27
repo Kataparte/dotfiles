@@ -1,8 +1,8 @@
-@define-color primary #84d2e6;
-@define-color surface #0f1416;
-@define-color on_surface #dee3e5;
+@define-color primary #a0cafd;
+@define-color surface #101418;
+@define-color on_surface #e1e2e8;
 
-@define-color notification_bg rgba(15, 20, 22, 0.8);
-@define-color bar_border rgba(132, 210, 230, 0.4);
+@define-color notification_bg rgba(16, 20, 24, 0.8);
+@define-color bar_border rgba(160, 202, 253, 0.4);
 
 

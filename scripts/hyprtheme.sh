@@ -33,6 +33,9 @@ if [ -n "$WP" ]; then
     
     # Force HyprPanel to register the path without its internal 'Apply' logic
     hyprpanel -p "$WP"
+
+    matugen image "$WP"
+    hyprctl reload
 else
     notify-send "Theme Switcher" "No wallpaper found for $SELECTED"
 fi

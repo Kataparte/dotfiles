@@ -55,4 +55,13 @@ configuration {
     terminal: "kitty";
     sort: false;
     disable-history: true;
+    display-drun: " "; 
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 5px 0px 0px;
+    text-color: @selected-normal-background; /* Use your Matugen accent */
+    font: "JetBrainsMono Nerd Font 14"; /* Slightly bigger for the icon look */
 }

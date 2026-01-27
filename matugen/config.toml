@@ -30,8 +30,8 @@ input_path = '~/.config/matugen/templates/cava.conf'
 output_path = '~/.config/cava/config_waybar'
 
 [templates.hyprlock]
-input_path = '~/.config/matugen/templates/hyprlock.conf'
-output_path = '~/.config/hypr/hyprlock.conf'
+input_path = '/home/kataparte/amethyst-dots/matugen/templates/hyprlock.conf'
+output_path = '/home/kataparte/.config/hypr/hyprlock.conf'
 
 [templates.nvim_colors]
 input_path = '~/.config/matugen/templates/nvim_colors.lua'

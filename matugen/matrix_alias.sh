@@ -1,3 +1,3 @@
 # Using bash-pipes version
-alias matrix='pipes -c "#84d2e6"'
-alias pipes='pipes -c "#84d2e6"'
+alias matrix='pipes -c "#ffb4ac"'
+alias pipes='pipes -c "#ffb4ac"'

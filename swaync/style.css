@@ -113,3 +113,23 @@ scale highlight {
     background: @primary;
     color: @surface;
 }
+
+/* Strip button styling for the power section */
+.widget-buttons-grid#power > flowbox > flowboxchild > button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Style the icons specifically */
+.widget-buttons-grid#power > flowbox > flowboxchild > button > label {
+    font-size: 26px;
+    color: @primary; /* Ranni Purple / Hellsing Red */
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* Make them pop on hover */
+.widget-buttons-grid#power > flowbox > flowboxchild > button:hover {
+    background: transparent;
+    transform: scale(1.2);
+}
